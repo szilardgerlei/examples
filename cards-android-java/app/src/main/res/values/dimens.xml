@@ -1,0 +1,27 @@
+<resources>
+
+    <dimen name="decimal_value_text_view_width">90dp</dimen>
+    <dimen name="default_root_margin">16dp</dimen>
+
+    <dimen name="default_view_small_margin">8dp</dimen>
+    <dimen name="default_view_normal_margin">12dp</dimen>
+    <dimen name="default_view_large_margin">24dp</dimen>
+
+    <dimen name="default_small_text_size">12sp</dimen>
+    <dimen name="default_normal_text_size">16sp</dimen>
+    <dimen name="default_large_text_size">20sp</dimen>
+
+    <dimen name="button_width">160dp</dimen>
+    <dimen name="button_height">36dp</dimen>
+
+    <dimen name="chart_view_height">100dp</dimen>
+    <dimen name="base_chart_view_height">4dp</dimen>
+    <dimen name="default_icon_width">30dp</dimen>
+    <dimen name="card_image_slider_width">17dp</dimen>
+    <dimen name="arrow_button_size">40dp</dimen>
+    <dimen name="radius_card">7dp</dimen>
+
+    <dimen name="one_dp">1dp</dimen>
+    <dimen name="two_dp">2dp</dimen>
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/card_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:gravity="center"
+        android:text="@string/card_unknown"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/default_large_text_size" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/left_btn"
+            android:layout_width="@dimen/arrow_button_size"
+            android:layout_height="@dimen/arrow_button_size"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrowleft"
+            android:tint="@color/colorPrimary" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/card_image_slider_width"
+            android:layout_marginRight="@dimen/card_image_slider_width"
+            android:layout_toStartOf="@+id/right_btn"
+            android:layout_toEndOf="@+id/left_btn">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/unknown_card_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/card_image_slider_width"
+                android:paddingRight="@dimen/card_image_slider_width"
+                android:src="@drawable/cccard0" />
+        </FrameLayout>
+
+
+        <ImageButton
+            android:id="@+id/right_btn"
+            android:layout_width="@dimen/arrow_button_size"
+            android:layout_height="@dimen/arrow_button_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:rotation="180"
+            android:src="@drawable/ic_arrowleft"
+            android:tint="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/card_counter_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/default_view_small_margin"
+        android:text="@string/sample_value_card_image_slider_counter"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/default_small_text_size" />
+
+</LinearLayout>

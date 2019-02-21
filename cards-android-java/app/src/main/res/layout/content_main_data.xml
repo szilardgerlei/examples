@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1. row: Current balance -->
+    <TextView
+        android:id="@+id/current_balance_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/label_current_balance"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/default_normal_text_size" />
+
+    <TextView
+        android:id="@+id/current_balance_usd_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:layout_toStartOf="@+id/current_balance_amount_tv"
+        android:text="@string/label_usd"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/default_normal_text_size" />
+
+    <TextView
+        android:id="@+id/current_balance_amount_tv"
+        android:layout_width="@dimen/decimal_value_text_view_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/sample_value_decimal"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorDark"
+        android:textSize="@dimen/default_normal_text_size" />
+
+    <!-- 2. row: Min. payment -->
+    <TextView
+        android:id="@+id/min_payment_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_balance_label_tv"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/label_min_payment"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/default_normal_text_size" />
+
+    <TextView
+        android:id="@+id/min_payment_usd_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_balance_usd_label_tv"
+        android:layout_alignStart="@+id/current_balance_usd_label_tv"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/label_usd"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/default_normal_text_size" />
+
+    <TextView
+        android:id="@+id/min_payment_amount_tv"
+        android:layout_width="@dimen/decimal_value_text_view_width"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/min_payment_usd_label_tv"
+        android:layout_alignBottom="@+id/min_payment_usd_label_tv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/sample_value_decimal"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorDark"
+        android:textSize="@dimen/default_normal_text_size" />
+
+    <!-- 3. row: Due Date -->
+    <TextView
+        android:id="@+id/due_date_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/min_payment_label_tv"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/label_due_date"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/default_normal_text_size" />
+
+    <TextView
+        android:id="@+id/due_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/due_date_label_tv"
+        android:layout_alignBottom="@+id/due_date_label_tv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/sample_value_date"
+        android:textColor="@color/colorDark"
+        android:textSize="@dimen/default_normal_text_size" />
+
+</RelativeLayout>

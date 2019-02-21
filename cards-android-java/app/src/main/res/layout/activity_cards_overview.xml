@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.gmail.gerlei.szilard.cards.view.activity.CardsOverviewActivity">
+
+    <com.gmail.gerlei.szilard.cards.view.widget.CardPagerView
+        android:id="@+id/view_image_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chart_view"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/default_view_small_margin"
+        android:layout_marginBottom="@dimen/default_view_normal_margin" />
+
+    <com.gmail.gerlei.szilard.cards.view.widget.ChartView
+        android:id="@+id/chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chart_view_height"
+        android:layout_above="@+id/include_main_data"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/default_root_margin"
+        android:layout_marginEnd="@dimen/default_root_margin" />
+
+    <include
+        android:id="@+id/include_main_data"
+        layout="@layout/content_main_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/details_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/default_root_margin"
+        android:layout_marginEnd="@dimen/default_root_margin" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/details_btn"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_above="@+id/navigation_tl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_view_large_margin"
+        android:layout_marginBottom="@dimen/default_view_small_margin"
+        android:background="@drawable/shape_btn_details"
+        android:onClick="onButtonClick"
+        android:text="@string/label_details"
+        android:textColor="@color/colorPrimary" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/navigation_tl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/default_view_normal_margin"
+        app:tabBackground="@android:color/transparent"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimaryDark"
+        app:tabTextAppearance="@style/TabLayoutTheme"
+        app:tabTextColor="@color/colorPrimary" />
+
+</RelativeLayout>

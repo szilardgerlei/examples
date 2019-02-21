@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.gmail.gerlei.szilard.cards"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ['library': 'true']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.supportLibVersion}"
+    implementation "com.google.android.material:material:${rootProject.ext.supportLibVersion}-rc01"
+    implementation "androidx.annotation:annotation:${rootProject.ext.supportLibVersion}"
+
+    // Architecture Components
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.0.0-rc01"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0-rc01"
+
+    // Networking
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitLibVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitLibVersion}"
+
+}

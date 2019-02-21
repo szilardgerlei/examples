@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/available_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/base_chart_view"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/label_available"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/available_balance_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/base_chart_view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/default_view_normal_margin"
+        android:text="@string/sample_value_decimal"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/default_large_text_size" />
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/base_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_chart_view_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_base_chart_item"
+        android:backgroundTint="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/alert_icon_iv"
+        android:layout_width="@dimen/default_icon_width"
+        android:layout_height="@dimen/default_icon_width"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:alpha="0"
+        android:background="@color/colorWhite"
+        android:src="@drawable/ic_alert"
+        android:tint="@color/colorRed" />
+
+</RelativeLayout>

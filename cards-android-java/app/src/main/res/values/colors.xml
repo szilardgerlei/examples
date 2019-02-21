@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#539AC6</color>
+    <color name="colorPrimaryDark">#004E7B</color>
+    <color name="colorAccent">#FFAD57</color>
+    <color name="colorDark">#05293E</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorRed">#ce3760</color>
+    <color name="colorUnknownCardBody">#7F7F7F</color>
+    <color name="colorUnknownCardShadowDark">#c6cbd9</color>
+    <color name="colorUnknownCardShadowLight">#dee1ea</color>
+
+</resources>
